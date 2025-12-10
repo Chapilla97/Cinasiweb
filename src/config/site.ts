@@ -2,16 +2,31 @@
  * SEO and theme configuration
  */
 
-import type { SEOConfig, ThemeConfig } from '../types';
+import type { SEOConfig, ThemeConfig } from "../types";
 
 export const seo: SEOConfig = {
-  title: 'Abdelrahman Saleh - Software Developer',
-  description: 'Software Developer based in Egypt specializing in React, Node.js, and modern web technologies',
-  keywords: ['Software Developer', 'React', 'Node.js', 'Web Development', 'Egypt'],
+  title: "Cinasi | Centro de Investigación",
+  description:
+    "Centro de Investigación Clínica y Coordinación de Estudios Farmacéuticos.",
+  keywords: [
+    "Cinasi",
+    "Investigación Clínica",
+    "Farmacéutica",
+    "Pisa",
+    "Estudios Clínicos",
+    "México",
+  ],
 };
 
 export const theme: ThemeConfig = {
-  primaryColor: '#1ED760', // Spotify green
-  secondaryColor: '#1d1d1f',
-  accentColor: '#007AFF',
+  // Azul Marino Pisa (Color Principal) - Usado en botones y acentos fuertes
+  primaryColor: "#002F6C",
+
+  // Gris muy oscuro/Azul noche (Color de fondo de terminal/ventanas en modo oscuro)
+  // Le da un toque más serio que el negro puro.
+  secondaryColor: "#0F172A",
+
+  // Azul Cielo/Cyan (Color de acento/selección)
+  // Un tono más claro para resaltar enlaces o elementos activos sin perder la gama azul.
+  accentColor: "#0099CC",
 };
