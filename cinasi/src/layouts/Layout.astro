@@ -1,22 +1,75 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="CINASI - Investigación a tu alcance" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	/* VARIABLES GLOBALES (Colores del diseño) */
+	:root {
+		--color-primary: #003366; /* Azul oscuro corporativo */
+		--color-accent: #FF9966;  /* Naranja/Salmón */
+		--color-light-blue: #6699CC; /* Azul claro para subtítulos */
+		--color-footer: #4A90E2; /* Azul medio del footer */
+		--bg-color: #f4f4f4;
+	}
+	
+	html {
+		font-family: 'Montserrat', sans-serif;
+		background: var(--bg-color);
+		scroll-behavior: smooth;
+	}
+
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		color: #333;
+	}
+
+	/* Utilidad para el ancho del contenido */
+	.container {
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* Reset básico */
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	
+	h1, h2, h3, p {
+		margin: 0;
+	}
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	
+	ul {
+		list-style: none;
+		padding: 0;
 	}
 </style>
