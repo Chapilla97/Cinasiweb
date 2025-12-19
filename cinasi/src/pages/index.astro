@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Aquí iría la lógica si la necesitaras, por ahora es solo estructura visual.
+// Sin importaciones arriba para evitar conflictos
 ---
 
 <Layout title="CINASI - Inicio">
@@ -9,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 	<header class="main-header">
 		<div class="container header-content">
 			<div class="logo">
-				<h2>CINASI</h2> 
+				<img src="/LogoCinasi.png" alt="CINASI Logo" style="max-height: 60px;" />
 			</div>
 			<nav class="navbar">
 				<a href="/">Inicio</a>
@@ -21,63 +20,141 @@ import Layout from '../layouts/Layout.astro';
 	</header>
 
 	<main>
-		<section class="hero">
+		<section class="hero-carousel">
+			<div id="tsparticles-hero" class="particles-container"></div>
+
+			<div class="slides-container">
+				<div class="slide active" style="background-image: url('/header1.png');"></div>
+				<div class="slide" style="background-image: url('/header2.png');"></div>
+			</div>
+
 			<div class="hero-overlay">
 				<div class="container hero-content">
 					<div class="hero-text">
-						<h1><span class="highlight"></span></h1>
+						<h1>Investigación a <span class="highlight">tu alcance</span></h1>
 					</div>
-					</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="content-overlap">
 			<div class="container">
-				<div class="card center-card">
-					<h2 class="card-title">Investigación a tu alcance</h2>
+				<div class="card center-card intro-card">
+					<h2 class="card-title">Excelencia Científica al Servicio de la Vida</h2>
 					<div class="separator center"></div>
 					<p>
-						Creamos soluciones analíticas mediante el diseño y 
-						ejecución de proyectos de investigación científica, 
-						que contribuyen al bienestar de la población.
+						En CINASI, garantizamos que cada medicamento sea seguro y eficaz. 
+						A través de estudios de Bioequivalencia, Farmacocinética y Fases Clínicas, 
+						conectamos el desarrollo farmacéutico con el bienestar global.
 					</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="zigzag-section">
-			<div class="container zigzag-grid">
-				<div class="card text-card">
-					<h2 class="card-title">Misión</h2>
+		<section class="technology-section">
+			<div class="container technology-grid">
+				<div class="tech-image-wrapper">
+					<img src="/tecnologia.png" alt="Tecnología de Punta" class="tech-img" />
+				</div>
+				<div class="tech-content">
+					<h2 class="section-title-left">Tecnología</h2>
 					<div class="separator left"></div>
 					<p>
-						Ayudamos a las personas a mejorar su salud y bienestar a través de desarrollar, 
-						fabricar y distribuir medicamentos genéricos novedosos de la más alta calidad, 
-						seguros, eficaces y accesibles.
+						Contamos con infraestructura de última generación y equipos analíticos de alta precisión 
+						que nos permiten cumplir con los estándares internacionales más exigentes.
+						Nuestra tecnología acelera los procesos de investigación garantizando resultados 
+						confiables y tiempos de respuesta óptimos para la industria farmacéutica.
 					</p>
-				</div>
-				<div class="image-card">
-					<div class="placeholder-img">FOTO MISIÓN</div> 
+					<a href="/servicios" class="btn-primary">Conoce más</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="zigzag-section">
-			<div class="container zigzag-grid reverse-layout">
-				<div class="card text-card">
-					<h2 class="card-title">Visión</h2>
-					<div class="separator left"></div>
-					<p>
-						Ayudamos a las personas a mejorar su salud y bienestar a través de desarrollar, 
-						fabricar y distribuir medicamentos genéricos novedosos de la más alta calidad, 
-						seguros, eficaces y accesibles.
-					</p>
-				</div>
-				<div class="image-card">
-					<div class="placeholder-img">FOTO VISIÓN</div>
+		<section class="expertise-section">
+			<div class="container">
+				<h2 class="section-title">Nuestras Áreas de <span class="highlight-text">Expertise</span></h2>
+				
+				<div class="expertise-grid">
+					<div class="expertis-card">
+						<div class="img-box">
+							<img src="/espertis1.png" alt="Análisis Clínicos" />
+						</div>
+						<div class="text-overlay">
+							<h3>Estudios Clínicos</h3>
+							<div class="separator-small"></div>
+							<p>Desarrollo de fases I, II y III con los más altos estándares de calidad y ética.</p>
+						</div>
+					</div>
+					<div class="expertis-card">
+						<div class="img-box">
+							<img src="/espertis2.png" alt="Bioanalítica" />
+						</div>
+						<div class="text-overlay">
+							<h3>Bioanalítica</h3>
+							<div class="separator-small"></div>
+							<p>Tecnología de punta para la cuantificación precisa de fármacos en fluidos biológicos.</p>
+						</div>
+					</div>
+					<div class="expertis-card">
+						<div class="img-box">
+							<img src="/espertis3.png" alt="Estadística" />
+						</div>
+						<div class="text-overlay">
+							<h3>Análisis Estadístico</h3>
+							<div class="separator-small"></div>
+							<p>Interpretación rigurosa de datos para garantizar resultados confiables.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<section class="clients-section">
+			<div class="container">
+				<h2 class="section-title">Clientes Principales</h2>
+				<div class="separator center"></div>
+			</div>
+			
+			<div class="marquee-wrapper">
+				<div class="marquee-track">
+					<div class="logo-slide">
+						<img src="/1.png" alt="Cliente 1">
+						<img src="/2.png" alt="Cliente 2">
+						<img src="/3.png" alt="Cliente 3">
+						<img src="/4.png" alt="Cliente 4">
+						<img src="/5.png" alt="Cliente 5">
+						<img src="/6.png" alt="Cliente 6">
+						<img src="/7.png" alt="Cliente 7">
+						<img src="/8.png" alt="Cliente 8">
+						<img src="/9.png" alt="Cliente 9">
+						<img src="/10.png" alt="Cliente 10">
+						<img src="/11.png" alt="Cliente 11">
+						<img src="/12.png" alt="Cliente 12">
+						<img src="/13.png" alt="Cliente 13">
+						<img src="/14.png" alt="Cliente 14">
+						<img src="/15.png" alt="Cliente 15">
+					</div>
+					<div class="logo-slide">
+						<img src="/1.png" alt="Cliente 1">
+						<img src="/2.png" alt="Cliente 2">
+						<img src="/3.png" alt="Cliente 3">
+						<img src="/4.png" alt="Cliente 4">
+						<img src="/5.png" alt="Cliente 5">
+						<img src="/6.png" alt="Cliente 6">
+						<img src="/7.png" alt="Cliente 7">
+						<img src="/8.png" alt="Cliente 8">
+						<img src="/9.png" alt="Cliente 9">
+						<img src="/10.png" alt="Cliente 10">
+						<img src="/11.png" alt="Cliente 11">
+						<img src="/12.png" alt="Cliente 12">
+						<img src="/13.png" alt="Cliente 13">
+						<img src="/14.png" alt="Cliente 14">
+						<img src="/15.png" alt="Cliente 15">
+					</div>
+				</div>
+			</div>
+		</section>
+
 	</main>
 
 	<footer class="main-footer">
@@ -97,176 +174,150 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</footer>
 
+    <script>
+        import { tsParticles } from "@tsparticles/engine";
+        import { loadFull } from "tsparticles";
+
+        (async () => {
+            await loadFull(tsParticles);
+            await tsParticles.load({
+                id: "tsparticles-hero",
+                options: {
+                    fullScreen: { enable: false },
+                    particles: {
+                        number: { value: 80, density: { enable: true, height: 800, width: 800 } },
+                        color: { value: "#ffffff" },
+                        shape: { type: "circle" },
+                        opacity: { value: 0.5 },
+                        size: { value: { min: 1, max: 5 } },
+                        links: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                        move: { enable: true, speed: 2, direction: "none", outModes: "out" }
+                    },
+                    // --- AQUÍ ESTÁ LA CORRECCIÓN: INTERACTIVIDAD ---
+                    interactivity: {
+                        events: {
+                            onHover: {
+                                enable: true,
+                                mode: "repulse" // Se alejan del mouse
+                            },
+                            onClick: {
+                                enable: true,
+                                mode: "push" // Crea partículas al hacer clic
+                            }
+                        },
+                        modes: {
+                            repulse: {
+                                distance: 100, // Radio de repulsión
+                                duration: 0.4
+                            },
+                            push: {
+                                quantity: 4
+                            }
+                        }
+                    },
+                    background: { color: "transparent" }
+                }
+            });
+        })();
+
+		// Carrusel de fondo
+		const slides = document.querySelectorAll('.slide');
+		let currentSlide = 0;
+		function nextSlide() {
+			if(slides.length > 0) {
+				slides[currentSlide].classList.remove('active');
+				currentSlide = (currentSlide + 1) % slides.length;
+				slides[currentSlide].classList.add('active');
+			}
+		}
+		setInterval(nextSlide, 5000);
+    </script>
+
 </Layout>
 
 <style>
-	/* --- HEADER --- */
-	.main-header {
-		background: #fff;
-		padding: 1rem 0;
-		position: sticky;
-		top: 0;
-		z-index: 100;
-		box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-	}
-	.header-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.logo h2 {
-		color: var(--color-primary);
-		font-weight: 700;
-		letter-spacing: 1px;
-	}
-	.navbar a {
-		margin-left: 20px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		transition: color 0.3s;
-	}
-	.navbar a:hover {
-		color: var(--color-accent);
-	}
+	/* --- ESTILOS GLOBALES --- */
+	.main-header { background: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+	.header-content { display: flex; justify-content: space-between; align-items: center; }
+	.logo img { display: block; }
+	.navbar a { margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+	.navbar a:hover { color: var(--color-accent); }
 
 	/* --- HERO --- */
-	.hero {
-		height: 80vh; /* Altura grande */
-		background-color: #ddd; /* Color de respaldo si no hay imagen */
-		/* Descomenta la siguiente línea cuando tengas la foto en public/ */
-		/* background-image: url('/fondo-inicio.jpg'); */
-		background-size: cover;
-		background-position: center;
-		position: relative;
-	}
-	.hero-overlay {
-		background: rgba(0, 51, 102, 0.3); /* Filtro azul sobre la foto */
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
-	.hero-text h1 {
-		color: #fff;
-		font-size: 3.5rem;
-		max-width: 600px;
-		line-height: 1.2;
-		text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-	}
-	.highlight {
-		color: var(--color-accent);
-	}
+	.hero-carousel { position: relative; height: 80vh; width: 100%; overflow: hidden; background-color: #000; }
+	/* IMPORTANTE: pointer-events: auto para que el canvas detecte el mouse, pero cuidado con el texto */
+	.particles-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; } 
+	
+	.slides-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+	.slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out; }
+	.slide.active { opacity: 1; }
+	
+	.hero-overlay { position: absolute; top: 0; left: 0; z-index: 10; background: rgba(0, 51, 102, 0.4); width: 100%; height: 100%; display: flex; align-items: center; pointer-events: none; }
+	/* Reactivar puntero en textos si es necesario seleccionar */
+	.hero-text { pointer-events: auto; }
+	
+	.hero-text h1 { color: #fff; font-size: 3.5rem; max-width: 600px; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+	.highlight { color: var(--color-accent); }
 
-	/* --- TARJETAS GENERALES --- */
-	.card {
-		background: #fff;
-		padding: 3rem;
-		border-radius: 20px;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-	}
-	.card-title {
-		color: var(--color-light-blue);
-		font-size: 2rem;
-		font-weight: 400;
-		margin-bottom: 0.5rem;
-	}
-	.separator {
-		height: 3px;
-		width: 70px;
-		background: var(--color-primary);
-		margin-bottom: 1.5rem;
-	}
+	/* --- INTRO CARD --- */
+	.intro-card { background: #fff; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: center; }
+	.content-overlap { margin-top: -100px; position: relative; z-index: 20; margin-bottom: 5rem; }
+	.center-card { max-width: 900px; margin: 0 auto; }
+	.card-title { color: var(--color-light-blue); font-size: 2rem; font-weight: 400; margin-bottom: 0.5rem; }
+	.separator { height: 3px; width: 70px; background: var(--color-primary); margin-bottom: 1.5rem; }
 	.separator.center { margin: 0 auto 1.5rem auto; }
 	.separator.left { margin: 0 0 1.5rem 0; }
-	.card p {
-		line-height: 1.8;
-		color: #555;
-	}
 
-	/* --- SECCIÓN EXCELENCIA (Overlap) --- */
-	.content-overlap {
-		margin-top: -100px; /* Sube la tarjeta sobre el hero */
-		position: relative;
-		z-index: 10;
-		margin-bottom: 5rem;
-	}
-	.center-card {
-		text-align: center;
-		max-width: 900px;
-		margin: 0 auto;
-	}
+	/* --- TECNOLOGÍA --- */
+	.technology-section { padding: 0 0 5rem 0; }
+	.technology-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+	.tech-image-wrapper { width: 100%; height: 400px; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+	.tech-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+	.tech-image-wrapper:hover .tech-img { transform: scale(1.1); }
+	.tech-content h2 { color: var(--color-primary); font-size: 2.5rem; margin-bottom: 10px; }
+	.tech-content p { color: #555; line-height: 1.8; margin-bottom: 2rem; font-size: 1.05rem; }
+	.btn-primary { display: inline-block; background: var(--color-accent); color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 600; transition: background 0.3s; }
+	.btn-primary:hover { background: var(--color-primary); }
 
-	/* --- SECCIONES ZIGZAG (Misión/Visión) --- */
-	.zigzag-section {
-		margin-bottom: 5rem;
-	}
-	.zigzag-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: center;
-	}
+	/* --- EXPERTISE --- */
+	.expertise-section { padding-bottom: 6rem; }
+	.section-title { text-align: center; font-size: 2.5rem; color: var(--color-primary); margin-bottom: 3rem; }
+	.section-title-left { text-align: left; font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+	.highlight-text { color: var(--color-accent); font-weight: 700; }
+	.expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: flex-start; }
 	
-	/* Estilos para invertir el orden visualmente */
-	.reverse-layout .text-card { order: 2; }
-	.reverse-layout .image-card { order: 1; }
+	.expertis-card { position: relative; margin-bottom: 2rem; }
+	.img-box { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+	.img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+	.expertis-card:hover .img-box img { transform: scale(1.1); }
+	
+	.text-overlay { background: #fff; width: 85%; margin: -50px auto 0 auto; position: relative; z-index: 10; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+	.text-overlay h3 { color: var(--color-primary); font-size: 1.5rem; margin-bottom: 10px; font-weight: 700; }
+	.separator-small { width: 40px; height: 3px; background: var(--color-accent); margin: 0 auto 15px auto; transition: width 0.3s; }
+	.expertis-card:hover .text-overlay { transform: scale(1.05) translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+	.expertis-card:hover .separator-small { width: 80px; }
 
-	.image-card {
-		height: 300px;
-		border-radius: 20px;
-		overflow: hidden;
-		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-	}
-	.placeholder-img {
-		width: 100%;
-		height: 100%;
-		background: #ccc;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #666;
-		font-weight: bold;
-	}
-	.image-card img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+	/* --- CLIENTES --- */
+	.clients-section { padding: 4rem 0; background-color: #f9f9f9; overflow: hidden; }
+	.marquee-wrapper { margin-top: 3rem; width: 100%; overflow: hidden; white-space: nowrap; position: relative; }
+	.marquee-track { display: flex; width: calc(200px * 24); animation: scroll 30s linear infinite; }
+	.logo-slide { display: flex; align-items: center; }
+	.logo-slide img { height: 80px; width: auto; margin: 0 40px; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s, opacity 0.3s, transform 0.3s; }
+	.logo-slide img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); cursor: pointer; }
+	@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 	/* --- FOOTER --- */
-	.main-footer {
-		background: var(--color-footer);
-		color: #fff;
-		padding-top: 3rem;
-	}
-	.footer-grid {
-		display: flex;
-		justify-content: flex-end; /* Alinea a la derecha */
-		padding-bottom: 2rem;
-	}
-	.footer-info {
-		text-align: right;
-	}
-	.footer-info a {
-		color: #fff;
-		text-decoration: underline;
-	}
-	.copyright {
-		background: var(--color-primary);
-		text-align: center;
-		padding: 1.5rem;
-		font-size: 0.85rem;
-	}
+	.main-footer { background: var(--color-footer); color: #fff; padding-top: 3rem; }
+	.footer-grid { display: flex; justify-content: flex-end; padding-bottom: 2rem; }
+	.copyright { background: var(--color-primary); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
 
-	/* --- RESPONSIVE --- */
 	@media (max-width: 768px) {
-		.hero-text h1 { font-size: 2.2rem; text-align: center; margin: 0 auto; }
-		.zigzag-grid { grid-template-columns: 1fr; }
-		.reverse-layout .text-card { order: initial; }
-		.reverse-layout .image-card { order: initial; }
+		.hero-text h1 { font-size: 2.2rem; }
+		.technology-grid { grid-template-columns: 1fr; gap: 2rem; }
+		.tech-image-wrapper { height: 250px; }
+		.expertise-grid { grid-template-columns: 1fr; }
+		.logo-slide img { height: 50px; margin: 0 20px; }
 		.footer-grid { justify-content: center; text-align: center; }
-		.footer-info { text-align: center; }
-		.navbar { display: none; /* Aquí luego agregaremos menú hamburguesa */ }
+		.navbar { display: none; }
 	}
 </style>

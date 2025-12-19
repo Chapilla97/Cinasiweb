@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// No importamos nada aquí arriba para evitar conflictos de servidor
+---
+
+<Layout title="Contacto - CINASI">
+	
+	<header class="main-header">
+		<div class="container header-content">
+			<div class="logo">
+				<img src="/LogoCinasi.png" alt="CINASI Logo" style="max-height: 60px;" />
+			</div>
+			<nav class="navbar">
+				<a href="/">Inicio</a>
+				<a href="/nosotros">Nosotros</a>
+				<a href="/servicios">Servicios</a>
+				<a href="/contacto" class="active">Contacto</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero-contact">
+			
+			<div id="tsparticles" class="particles-wrapper"></div>
+
+			<div class="hero-bg"></div>
+
+			<div class="hero-content">
+				<h1>Contáctanos</h1>
+				<p>Estamos listos para colaborar.</p>
+			</div>
+		</section>
+
+		<section class="contact-section">
+			<div class="container">
+				<div class="contact-card">
+					<h2>Prueba de Animación</h2>
+					<p>Si ves círculos rojos, ¡YA QUEDÓ!</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="main-footer">
+		<div class="container">
+			<p>© 2025 CINASI.</p>
+		</div>
+	</footer>
+
+    <script>
+        import { tsParticles } from "@tsparticles/engine";
+        import { loadFull } from "tsparticles";
+
+        // Función de arranque inmediato
+        (async () => {
+            console.log("⚡ Intentando cargar partículas...");
+
+            await loadFull(tsParticles);
+
+            await tsParticles.load({
+                id: "tsparticles", // Debe coincidir con el ID del div de arriba
+                options: {
+                    fullScreen: { enable: false },
+                    particles: {
+                        number: { value: 50 },
+                        color: { value: "#FF0000" }, // Rojo para probar
+                        shape: { type: "circle" },   // Círculo para asegurar
+                        opacity: { value: 1 },
+                        size: { value: { min: 5, max: 10 } },
+                        move: {
+                            enable: true,
+                            speed: 3,
+                            direction: "bottom",
+                            outModes: "out"
+                        }
+                    },
+                    background: { color: "transparent" }
+                }
+            });
+            
+            console.log("✅ Partículas cargadas (método directo)");
+        })();
+    </script>
+
+</Layout>
+
+<style>
+	/* Header */
+	.main-header { background: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+	.header-content { display: flex; justify-content: space-between; align-items: center; }
+	.navbar a { margin-left: 20px; text-transform: uppercase; font-weight: 600; font-size: 0.9rem; }
+
+	/* Hero */
+	.hero-contact {
+		position: relative;
+		height: 50vh;
+		width: 100%;
+		background-color: #003366;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	/* Wrapper de partículas */
+	.particles-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50; /* Encima del fondo */
+		pointer-events: none;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.3;
+		z-index: 1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 100;
+		color: white;
+		text-align: center;
+	}
+
+	.contact-section { padding: 4rem 0; text-align: center; }
+	.main-footer { background: #4A90E2; color: #fff; padding: 1rem; text-align: center; }
+</style>
